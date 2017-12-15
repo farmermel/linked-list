@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import Node from '../scripts/Node'
 import LinkedList from '../scripts/LinkedList'
 
-describe('LINKED LIST', () => {
+describe.only('LINKED LIST', () => {
   let list;
 
   beforeEach(() => {
@@ -18,7 +18,7 @@ describe('LINKED LIST', () => {
   });
 
   describe('UNSHIFT', () => {
-    it.skip('should add items to front of list / head', () => {
+    it('should add items to front of list / head', () => {
       list.unshift('duck');
       expect(list.length).to.equal(1)
       expect(list.head.data).to.equal('duck')
@@ -31,13 +31,13 @@ describe('LINKED LIST', () => {
   })
 
   describe('SHIFT', () => {
-    it.skip('should return null if nothing in the list', () => {
+    it('should return null if nothing in the list', () => {
       let result = list.shift();
 
       expect(result).to.equal(null)
     })
 
-    it.skip('should return the first item in the list', () => {
+    it('should return the first item in the list', () => {
       list.unshift('duck');
 
       expect(list.head.data).to.equal('duck');
@@ -47,7 +47,7 @@ describe('LINKED LIST', () => {
       expect(result.data).to.equal('duck');
     })
 
-    it.skip('should remove items from the front of list / head', () => {
+    it('should remove items from the front of list / head', () => {
 
       list.unshift('duck');
       list.unshift('goose');
@@ -55,7 +55,7 @@ describe('LINKED LIST', () => {
       expect(list.head.next.data).to.equal('duck');
 
       // remove goose from list
-      result = list.shift();
+      let result = list.shift();
       expect(result.data).to.equal('goose')
 
       // duck should now be back at the start of the list
@@ -72,7 +72,7 @@ describe('LINKED LIST', () => {
   })
 
   describe('PUSH', () => {
-    it.skip('should push a single element to a list', () => {
+    it('should push a single element to a list', () => {
       list.push('duck');
       expect(list.head.data).to.eq('duck');
     });
