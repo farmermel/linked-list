@@ -63,8 +63,42 @@ export default class LinkedList {
 
       previous.next = null;
       this.length--;
-      return toReturn;
-    
-    
+      return toReturn;  
+  }
+
+  find(data) {
+    let foundNode = null;
+    let currNode = this.head;
+
+    while (currNode) {
+      if(currNode.data === data) {
+        foundNode = currNode;
+        break;
+      } else {
+        currNode = currNode.next;
+      }
+    }
+    return foundNode;
+  }
+
+  delete(data) {
+    if(this.head.data === data) {
+      this.length--;
+      this.head.next ? this.head = this.head.next : this.head = null;
+    }
+
+    let current = this.head;
+    let previous = this.head;
+
+    while(current) {
+      if (current.data === data) {
+        previous.next = current.next;
+        current = null;
+        this.length--;
+      } else{
+        previous = current;
+        current = current.next;
+      }
+    }
   }
 }
