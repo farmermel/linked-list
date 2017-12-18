@@ -84,11 +84,11 @@ export default class LinkedList {
   delete(data) {
     if(this.head.data === data) {
       this.length--;
-      this.head.next ? this.head = this.head.next : this.head = null;
+      this.head = this.head.next;
     }
 
     let current = this.head;
-    let previous = this.head;
+    let previous;
 
     while(current) {
       if (current.data === data) {
@@ -100,5 +100,19 @@ export default class LinkedList {
         current = current.next;
       }
     }
+  }
+
+  toArray() {
+    let ind = 0;
+    let arr = [];
+    let current = this.head;
+
+    while(current) {
+      arr[ind] = current.data;
+      current = current.next;
+      ind++;
+    }
+
+    return arr;
   }
 }

@@ -300,24 +300,24 @@ describe.only('LINKED LIST', () => {
     })
   });
 
-  // describe('TO ARRAY', () => {
-  //   it.skip('converts to an array', () => {
-  //     expect(list.toArray()).to.deep.equal([]);
-  //   });
+  describe('TO ARRAY', () => {
+    it('converts to an array', () => {
+      expect(list.toArray()).to.deep.equal([]);
+    });
 
-  //   context('when there are several elements', () => {
-  //     beforeEach(() => {
-  //       list.push('The');
-  //       list.push('rain');
-  //       list.push('in');
-  //       list.push('Spain');
-  //     });
+    context('when there are several elements', () => {
+      beforeEach(() => {
+        list.push('The');
+        list.push('rain');
+        list.push('in');
+        list.push('Spain');
+      });
 
-  //     it.skip('can convert to an array', () => {
-  //       expect(list.toArray()).to.deep.equal(['The', 'rain', 'in', 'Spain']);
-  //     });
-  //   });
-  // });
+      it('can convert to an array', () => {
+        expect(list.toArray()).to.deep.equal(['The', 'rain', 'in', 'Spain']);
+      });
+    });
+  });
 
   // describe('INCLUDES', () => {
   //   beforeEach(() => {
