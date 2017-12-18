@@ -115,4 +115,85 @@ export default class LinkedList {
 
     return arr;
   }
+
+  include(data) {
+    let current = this.head;
+
+    while(current) {
+      if(current.data === data) {
+        return true;
+      } else {
+        current = current.next;
+      }
+    }
+    return false;
+  }
+
+  index(data) {
+    let ind = 0;
+    let current = this.head;
+
+    while(current) {
+      if(current.data === data) {
+        return ind;
+      } else {
+        current = current.next;
+        ind++;
+      }
+    }
+    return null;
+  }
+
+  insert(index, data) {
+    let current = this.head;
+    let count = 0;
+
+    let newNode = new Node(data);
+
+    while(count <= index) {
+      count++;
+
+      if(count === index) {
+        newNode.next = current.next;
+        current.next = newNode;
+        this.length++
+      }
+
+      current = current.next
+    }
+  }
+
+  insertAfter(find, data) {
+    let current = this.head;
+    let newNode = new Node(data);
+
+    if(!current.next) {
+      return null;
+    }
+
+    while(current.data !== find) {
+      current = current.next
+    }
+
+    newNode.next = current.next;
+    current.next = newNode;
+    this.length++
+  }
+
+  distance(first, second) {
+    let count;
+    let current = this.head;
+
+    while (current) {
+      if(current.data === first) {
+        count = 0;
+      }
+      count++;
+      current = current.next;
+
+      if(current.data === second) {
+        return count;
+      }
+    }
+  }
 }
