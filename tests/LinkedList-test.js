@@ -319,82 +319,82 @@ describe.only('LINKED LIST', () => {
     });
   });
 
-  // describe('INCLUDES', () => {
-  //   beforeEach(() => {
-  //     list.push('The');
-  //     list.push('rain');
-  //     list.push('in');
-  //     list.push('Spain');
-  //   });
+  describe('INCLUDES', () => {
+    beforeEach(() => {
+      list.push('The');
+      list.push('rain');
+      list.push('in');
+      list.push('Spain');
+    });
 
-  //   it.skip('should return true if node is in list', () => {
-  //     expect(list.include("rain")).to.eq(true);
-  //   });
+    it('should return true if node is in list', () => {
+      expect(list.include("rain")).to.eq(true);
+    });
 
-  //   it.skip('should return false if node is not in list', () => {
-  //     expect(list.include("nope")).to.eq(false);
-  //   });
-  // });
+    it('should return false if node is not in list', () => {
+      expect(list.include("nope")).to.eq(false);
+    });
+  });
 
-  // describe('INDEX', () => {
-  //   beforeEach(() => {
-  //     list.push('oh');
-  //     list.push('hello');
-  //     list.push('world');
-  //   });
+  describe('INDEX', () => {
+    beforeEach(() => {
+      list.push('oh');
+      list.push('hello');
+      list.push('world');
+    });
 
-  //   it.skip('should return expected indexes', () => {
-  //     expect(list.index('oh')).to.eq(0);
-  //     expect(list.index('world')).to.eq(2);
-  //     expect(list.index('nope')).to.eq(null);
-  //   });
-  // });
+    it('should return expected indexes', () => {
+      expect(list.index('oh')).to.eq(0);
+      expect(list.index('world')).to.eq(2);
+      expect(list.index('nope')).to.eq(null);
+    });
+  });
 
-  // describe('INSERT', () => {
-  //   beforeEach(() => {
-  //     list.push('dark');
-  //     list.push('stormy');
-  //   });
+  describe('INSERT', () => {
+    beforeEach(() => {
+      list.push('dark');
+      list.push('stormy');
+    });
 
-  //   it.skip('should insert nodes', () => {
-  //     expect(list.length).to.eq(2);
-  //     list.insert(1, 'and');
-  //     list.insert(3, 'night');
-  //     expect(list.length).to.eq(4);
-  //     expect(list.toArray()).to.deep.equal(['dark', 'and', 'stormy', 'night']);
-  //   });
-  // });
+    it('should insert nodes', () => {
+      expect(list.length).to.eq(2);
+      list.insert(1, 'and');
+      list.insert(3, 'night');
+      expect(list.length).to.eq(4);
+      expect(list.toArray()).to.deep.equal(['dark', 'and', 'stormy', 'night']);
+    });
+  });
 
-  // describe('INSERT AFTER', () => {
-  //   beforeEach(() => {
-  //     list.push('dark');
-  //     list.push('stormy');
-  //   });
+  describe('INSERT AFTER', () => {
+    beforeEach(() => {
+      list.push('dark');
+      list.push('stormy');
+    });
 
-  //   it.skip('should insert nodes after other nodes', () => {
-  //     expect(list.length).to.eq(2);
-  //     list.insertAgfter('dark', 'and');
-  //     list.insertAfter('stormy', 'night');
-  //     expect(list.length).to.eq(4);
-  //     expect(list.toArray()).to.deep.equal(['dark', 'and', 'stormy', 'night']);
-  //   });
-  // });
+    it('should insert nodes after other nodes', () => {
+      expect(list.length).to.eq(2);
+      list.insertAfter('dark', 'and');
+      list.insertAfter('stormy', 'night');
+      expect(list.length).to.eq(4);
+      expect(list.toArray()).to.deep.equal(['dark', 'and', 'stormy', 'night']);
+    });
+  });
 
-  // describe('DISTANCE', () => {
-  //   beforeEach(() => {
-  //     list.push("hello")
-  //     list.push("pizza")
-  //     list.push("world")
-  //     list.push("today")
-  //     list.push("tomorrow")
-  //   });
+  describe('DISTANCE', () => {
+    beforeEach(() => {
+      list.push("hello")
+      list.push("pizza")
+      list.push("world")
+      list.push("today")
+      list.push("tomorrow")
+    });
 
-  //   it.skip('should calculate distance between nodes', () => {
-  //     expect(list.distance("hello", "today")).to.eq(3);
-  //     expect(list.distance("pizza", "today")).to.eq(2);
-  //     expect(list.distance("hello", "world")).to.eq(2);
-  //     expect(list.distance("hello", "tomorrow")).to.eq(4);
-  //     expect(list.distance("world", "today")).to.eq(1);
-  //   });
-  // });
+    it('should calculate distance between nodes', () => {
+      expect(list.distance("hello", "today")).to.eq(3);
+      expect(list.distance("pizza", "today")).to.eq(2);
+      expect(list.distance("hello", "world")).to.eq(2);
+      expect(list.distance("hello", "tomorrow")).to.eq(4);
+      expect(list.distance("world", "today")).to.eq(1);
+    });
+  });
 });
