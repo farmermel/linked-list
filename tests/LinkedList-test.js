@@ -184,33 +184,33 @@ describe.only('LINKED LIST', () => {
       });
   });
 
-  // describe('FIND', () => {
-  //   beforeEach(() => {
-  //     list.push('oh');
-  //     list.push('hello');
-  //     list.push('world');
-  //   });
+  describe('FIND', () => {
+    beforeEach(() => {
+      list.push('oh');
+      list.push('hello');
+      list.push('world');
+    });
 
-  //   it.skip('should return the node if it is found', () => {
-  //     const result = list.find('hello');
+    it('should return the node if it is found', () => {
+      const result = list.find('hello');
 
-  //     expect(result.data).to.eq('hello');
-  //     expect(result.next.data).to.eq('world');
-  //   });
+      expect(result.data).to.eq('hello');
+      expect(result.next.data).to.eq('world');
+    });
 
-  //   it.skip('should return true the node if node in list', () => {
-  //     const result = list.find('world');
+    it('should return true the node if node in list', () => {
+      const result = list.find('world');
 
-  //     expect(result.data).to.eq('world');
-  //     expect(result.next).to.eq(null);
-  //   });
+      expect(result.data).to.eq('world');
+      expect(result.next).to.eq(null);
+    });
 
-  //   it.skip('should return null if node is missing', () => {
-  //     const result = list.find("nope");
+    it('should return null if node is missing', () => {
+      const result = list.find("nope");
 
-  //     expect(result).to.eq(null);
-  //   });
-  // });
+      expect(result).to.eq(null);
+    });
+  });
 
   // describe('LAST NODE', () => {
   //   context('with several nodes', () => {
@@ -243,62 +243,62 @@ describe.only('LINKED LIST', () => {
   //   });
   // });
 
-  // describe('DELETE', () => {
-  //   it.skip('deletes a solo node', () => {
-  //     list.push('hello');
-  //     list.delete('hello');
-  //     expect(list.length).to.eq(0);
-  //     expect(list.head).to.eq(null);
-  //   });
+  describe('DELETE', () => {
+    it('deletes a solo node', () => {
+      list.push('hello');
+      list.delete('hello');
+      expect(list.length).to.eq(0);
+      expect(list.head).to.eq(null);
+    });
 
-  //   it.skip('does not perform a delete when a node does not match', () => {
-  //     list.push('hello');
-  //     list.delete('goodbye');
-  //     expect(list.length).to.eq(1);
-  //     expect(list.head.data).to.eq('hello');
-  //   });
+    it('does not perform a delete when a node does not match', () => {
+      list.push('hello');
+      list.delete('goodbye');
+      expect(list.length).to.eq(1);
+      expect(list.head.data).to.eq('hello');
+    });
 
-  //   context('with more elements', () => {
-  //     beforeEach(() => {
-  //       list.push('hello');
-  //       list.push('darkness');
-  //       list.push('my');
-  //       list.push('old');
-  //       list.push('friend');
-  //     });
+    context('with more elements', () => {
+      beforeEach(() => {
+        list.push('hello');
+        list.push('darkness');
+        list.push('my');
+        list.push('old');
+        list.push('friend');
+      });
 
-  //     it.skip('changes the list length', () => {
-  //       expect(list.head.next.data).to.eq('darkness');
-  //       expect(list.length).to.eq(5);
+      it('changes the list length', () => {
+        expect(list.head.next.data).to.eq('darkness');
+        expect(list.length).to.eq(5);
 
-  //       list.delete('friend');
-  //       expect(list.length).to.eq(4);
-  //       list.delete('my');
-  //       expect(list.length).to.eq(3);
-  //       list.delete('happy');
-  //       expect(list.length).to.eq(3);
-  //     });
+        list.delete('friend');
+        expect(list.length).to.eq(4);
+        list.delete('my');
+        expect(list.length).to.eq(3);
+        list.delete('happy');
+        expect(list.length).to.eq(3);
+      });
 
-  //     it.skip('resets the next property on the node before the deleted node', () => {
-  //       expect(list.head.next.data).to.eq('darkness');
+      it('resets the next property on the node before the deleted node', () => {
+        expect(list.head.next.data).to.eq('darkness');
 
-  //       list.delete('darkness');
+        list.delete('darkness');
 
-  //       expect(list.head.next.data).to.eq('my');
+        expect(list.head.next.data).to.eq('my');
 
-  //       list.delete('my')
+        list.delete('my')
 
-  //       expect(list.head.next.data).to.eq('old')
-  //     });
+        expect(list.head.next.data).to.eq('old')
+      });
 
-  //     it.skip('resets the list.head if deleting the first node', () => {
-  //       expect(list.head.data).to.eq('hello');
-  //       list.delete('hello');
-  //       expect(list.head.data).to.eq('darkness');
-  //     });
+      it('resets the list.head if deleting the first node', () => {
+        expect(list.head.data).to.eq('hello');
+        list.delete('hello');
+        expect(list.head.data).to.eq('darkness');
+      });
 
-  //   })
-  // });
+    })
+  });
 
   // describe('TO ARRAY', () => {
   //   it.skip('converts to an array', () => {
